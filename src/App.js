@@ -1,25 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Faq from './components/Faq';
+
+
+
+let faq = [
+  {
+    question: "Für wen ist dieses Bootcamp?",
+    answer:
+      "Für alle Menschen die motiviert sind Neues zu lernen! Du solltest außerdem über 18 Jahre alt sein und bestenfalls eine Leidenschaft für den Bereich IT mitbringen.",
+  },
+  {
+    question: "Welcher akademische Grad ist erforderlich?",
+    answer:
+      "Lange Rede, kurzer Sinn – Keiner. Wir sind auf der Suche nach wunderbaren Querdenkern*innen, die motiviert sind ein neues Leben zu starten.",
+  },
+  {
+    question: "Ist Vorerfahrung im Bereich IT / Coding notwendig?",
+    answer:
+      "Nein. Alles was du brauchst ist Zeit, Motivation und den Willen eines Bill Gates. 😉 Du solltest aber in der Lage sein, Songs von Britney Spears zu verstehen und zu übersetzen, da alle Programmiersprachen auf Englisch basieren.",
+  },
+  {
+    question: "Wie lange dauern die Bootcamps?",
+    answer:
+      "Das kommt ganz auf das Kursformat an. Der Vollzeit Kurs ist 22 Wochen lang (5 Monate) und der Teilzeitkurs streckt sich über 30 Wochen (7 Monate).",
+  }
+]
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <h1>FAQ</h1>
+      {faq.map((singleData, i) => <Faq
+        key={i}
+        data={singleData}
+      />)
+      }
+
+    </main>
   );
-}
+};
 
 export default App;

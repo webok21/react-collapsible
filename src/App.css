@@ -1,38 +1,42 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #3DD7AD;
+  background: #070022;
+}
+h1 {
   text-align: center;
+  padding: 10vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h4 {
+  padding: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Collapsible {
+  width: 70%;
+  border: 1px solid #fff;
+  margin-left: 15%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Collapsible h4 {
+  background: #5D3EDE;
+  position: relative;
 }
-
-.App-link {
-  color: #61dafb;
+.Collapsible p {
+  background: #070022;
+  margin: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Collapsible__trigger.is-open h4:after {
+  content: '\-';
+  font-size: 1.6em;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+.Collapsible__trigger.is-closed h4:after {
+  content: '\+';
+  font-size: 1.6em;
+  position: absolute;
+  top: 12px;
+  right: 10px;
 }
